@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Log-in{% endblock %}
+{% block title %}Registration{% endblock %}
 {% block content %}
 {% block extra_head %}
-<link href="{% static 'auth.css' %}" rel="stylesheet">
+<link href="{% static 'regist.css' %}" rel="stylesheet">
 {% endblock %}
 
 <div class="page">
   <div class="container">
     <div class="left">
-      <div class="login">Login</div>
-      <div class="eula">Login to continue using the schedule</div>
+      <div class="login">Register</div>
+      <div class="eula">Register to continue using the schedule</div>
     </div>
     <div class="right">
       <form class="form">
         {% csrf_token %}
         <p>{{ form.username }}</p>
+        <p>{{ form.email }}</p>
         <p>{{ form.password }}</p>
-        <p><input class ="Logins" type="submit" value="Login"></p>
-        <p class="message">Already registered? <a href="{% url 'regist' %}">Registered</a></p>
+        <p><input class ="Registration" type="submit" value="Registration"></p>
       </form>
     </div>
   </div>
