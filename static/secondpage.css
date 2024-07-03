@@ -1,0 +1,202 @@
+body {
+    background: white;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    width:100px ;
+    overflow: hidden;
+  }
+
+.page {
+    background: #e2e2e5;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    position: absolute;
+    width: calc(100% - 40px);
+}
+
+.box {
+    border-radius: 50%;
+    margin-left: -200px;
+    background-color: #474A59;
+    position: absolute;
+    bottom: -400px; /* Начальное положение за пределами экрана */
+    animation: orbit  1.5s ease-in-out forwards;; /* Начальное положение за пределами экрана */
+  }
+  
+  
+  @keyframes orbit {
+    0% {
+        bottom: 800px;
+        height: 900px;
+        width: 900px;
+        margin-left: -500px;
+        filter: blur(3px);
+        background-color: white; /* Начальное положение */
+      }
+      100% {
+        bottom: -200px;
+        height: 400px;
+        width: 400px;
+        margin-left: -200px;
+        filter: blur(0px);
+        background-color: #474A59; /* Конечное положение */
+      }
+    }
+
+.box2{
+        border-radius: 50%;
+        background-color: #474A59;
+        position: absolute;
+        bottom: 400px; /* Начальное положение за пределами экрана */
+        animation: orbit2  1.5s ease-in-out forwards; /* Начальное положение за пределами экрана */
+      }
+
+@keyframes orbit2 {
+        0% {
+          bottom: 0px;
+          margin-left: 80%; /* Начальное положение */
+          height: 400px;
+          width: 400px;
+          filter: blur(0px);
+          background-color: white
+          
+        }
+          100% {
+            bottom: 650px;
+            height: 900px;
+            width: 1200px;
+            margin-left: 80%;
+            filter: blur(3px);
+            background-color: #474A59; /* Конечное положение */
+          }
+        }
+
+.text {
+    margin: 40px;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 32%;
+    width: 60%;
+    background: #ffffff;
+    border-radius: 30px;
+  }
+.content{
+    background-size: 200% ;
+    opacity: 0; /* начальное значение непрозрачности */
+  animation: text ease-in 1; /* добавляем анимацию fadeIn */
+  animation-fill-mode: forwards; /* будет видимым после завершения анимации */
+  animation-duration: 1s; /* длительность анимации в 1 секунду */
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.base {
+    background: #474A59;
+    box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+    color: #F1F1F2;
+    position: relative;
+    width: 50%;
+    margin-left: 40%;
+    display: inline-block;
+    margin-top: 30%;
+    border-radius: 30px;
+  }
+
+.buttons{
+    margin-top: 2%;
+    text-align: center;
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 100px;
+    line-height: 30px;
+    outline: none !important;
+    width: 100%;
+}
+
+.Registration {
+    font-weight: 900;
+    width: 150px;
+    height: 80px;
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    margin-right: 100px;
+    transition: 1s;
+}
+
+.Login {
+    font-weight: 900;
+    margin-right: 30%;
+    width: 150px;
+    height: 80px;
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    margin-left: 100px;
+    transition: 1s; /* Время эффекта */
+} 
+.Login:hover,.Registration:hover {
+    transform: scale(1.7); /* Увеличиваем масштаб */
+    color: #8338ec;
+  }
+
+.content h1 {
+    font-size: 8em;
+    transform: translate(-50%, -50%);
+  }
+  
+.content h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #8338ec;
+  }
+  
+.content h1:nth-child(2) {
+    color: #c19bf5;
+    animation: animate 4s ease-in-out infinite;
+  }
+  
+
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+  

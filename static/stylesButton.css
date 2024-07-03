@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.tumbler-button {
+    position: fixed;
+    right: 920px;
+    bottom: 100px;
+    width: 60px;
+    height: 120px;
+    background-color: #444;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: right 1s ease, transform 1s ease;
+    right: 920px; /* начальная позиция в середине экрана */
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.arrow {
+    font-size: 24px;
+    color: #000;
+    transition: transform 0.3s ease;
+}
+.tumbler-button.active .circle {
+    transform: translateY(50px);
+}
+.tumbler-button.active .arrow {
+    transform: rotate(180deg);
+}
+.tumbler-button.right {
+    right: 70px; /* позиция справа */
+}

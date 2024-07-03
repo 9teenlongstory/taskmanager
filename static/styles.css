@@ -1,0 +1,12 @@
+#content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#content.fade-in {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}

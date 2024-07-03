@@ -4,6 +4,7 @@
 {% block content %}
 {% block extra_head %}
 <link href="{% static 'auth.css' %}" rel="stylesheet">
+<link href="{% static 'styles.css' %}" rel="stylesheet">
 {% endblock %}
 
 <div class="page">
@@ -13,14 +14,16 @@
       <div class="eula">Login to continue using the schedule</div>
     </div>
     <div class="right">
-      <form class="form">
+      <form class="form" method="post">
         {% csrf_token %}
         <p>{{ form.username }}</p>
         <p>{{ form.password }}</p>
-        <p><input class ="Logins" type="submit" value="Login"></p>
+        <p><input class ="Logins"  type="submit" value="Login"></p>
         <p class="message">Already registered? <a href="{% url 'regist' %}">Registered</a></p>
       </form>
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'animationweb.js' %}"></script>
 {% endblock %}

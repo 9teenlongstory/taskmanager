@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+{% block extra_head %}
+<link href="{% static 'stylesButton.css' %}" rel="stylesheet">
+<link href="{% static 'firstpage.css' %}" rel="stylesheet">
+{% endblock %}
+<div id="main-content">
+    <div class="content">
+        <h1 class="text2">FLOW TUSKMANAGER</h1>
+        <h1 class="text2">FLOW TUSKMANAGER</h1>
+        <div class="box3"></div>
+    </div>
+    <div class="box4"></div>
+</div>
+<div id="new-content"></div>
+<div class="tumbler-button" id="scroll-btn" onclick="toggleTumbler()">
+    <div class="circle">
+        <div class="arrow">↓</div>
+    </div>
+</div>
+</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'animationscrollbutton.js' %}"></script>
+{% endblock %}

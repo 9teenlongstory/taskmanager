@@ -4,6 +4,7 @@
 {% block content %}
 {% block extra_head %}
 <link href="{% static 'regist.css' %}" rel="stylesheet">
+<link href="{% static 'styles.css' %}" rel="stylesheet">
 {% endblock %}
 
 <div class="page">
@@ -13,7 +14,7 @@
       <div class="eula">Register to continue using the schedule</div>
     </div>
     <div class="right">
-      <form class="form">
+      <form class="form" method="post">
         {% csrf_token %}
         <p>{{ form.username }}</p>
         <p>{{ form.email }}</p>
@@ -23,4 +24,6 @@
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'animationweb.js' %}"></script>
 {% endblock %}

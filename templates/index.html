@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+{% block extra_head %}
+<link href="{% static 'secondpage.css' %}" rel="stylesheet">
+<link href="{% static 'stylesButton.css' %}" rel="stylesheet">
+{% endblock %}
+<div id="new-content-inner">
+    <div class="page">
+                <div class="content">
+                    <h1 class="text">Please Register or Log in to your profile</h1>
+                    <h1 class="text">Please Register or Log in to your profile</h1>
+                    <div class="box"></div>
+                </div>
+            <div class="box2"></div>
+        <div class="base">
+            <div class="buttons">
+                <a class="transition-link" href="{% url 'login' %}">
+                    <input class="Login" type="button" value="Login">
+                </a>
+                <a class="transition-link" href="{% url 'regist' %}">
+                    <input class="Registration" type="button" value="Registration">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
+<!-- 
+{% if user.is_authenticated %}
+Hi {{user.username}}
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+Poshel naxuy
+{% endif %}
+-->
