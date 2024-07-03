@@ -24,11 +24,22 @@ margin-top: 10%;
   padding-top: 10%;
   font-size: 80%;
   padding-left:30px;
+  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .Logins {
     margin-top: 10%;
     font-weight: 900;
+    transition: 1s;
 }
 
 .container {
@@ -50,12 +61,39 @@ margin-top: 10%;
   font-size: 50px;
   font-weight: 900;
   margin: 50px 40px 40px;
+  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.Logins:hover{
+  transform: scale(1.3); /* Увеличиваем масштаб */
+  color: #8338ec;
+  background-color: white;
+  border-radius: 200px;
 }
 .eula {
   color: #999;
   font-size: 14px;
   line-height: 1.5;
   margin: 40px;
+  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .right {
   background: #474A59;
@@ -63,6 +101,7 @@ margin-top: 10%;
   color: #F1F1F2;
   position: relative;
   width: 50%;
+  border-radius: 30px;
 }
 
 .form {

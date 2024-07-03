@@ -8,7 +8,7 @@ body {
     bottom: 100px;
     width: 60px;
     height: 120px;
-    background-color: #444;
+    background-color: #000000;
     border-radius: 30px;
     cursor: pointer;
     border: 2px solid #fff;
@@ -22,7 +22,7 @@ body {
 .circle {
     width: 50px;
     height: 50px;
-    background-color: #bbb;
+    background-color: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -36,10 +36,14 @@ body {
 }
 .tumbler-button.active .circle {
     transform: translateY(50px);
+    background-color: #474A59
 }
 .tumbler-button.active .arrow {
     transform: rotate(180deg);
+    color: #ffffff;
 }
 .tumbler-button.right {
-    right: 70px; /* позиция справа */
+    right: 70px;
+    background-color: #ffffff;
+    border: 2px solid #474A59; /* позиция справа */
 }
